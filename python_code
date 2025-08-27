@@ -1,2 +1,0 @@
-#Live Data fetch scripts 
-This folder contains Jupyter notebooks used to fetch and store live trading data from servers. These scripts automate the process of capturing real-time market data for MCX, NSE & BSE segments data.
