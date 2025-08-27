@@ -3,7 +3,7 @@ Overview
 
 This project builds an automated data pipeline to manage large-scale tradebook data. It extracts, cleans, transforms, and stores raw files using Python (Pandas) into a SQL Server database for fast, accurate access. The pipeline integrates Power BI dashboards to visualize trader performance, strategies, and anomalies, enabling data-driven decision-making.
 
-Key Features
+# Key Features
 
 Automated ETL pipeline using Python (Pandas) for data cleaning and merging.
 
@@ -13,7 +13,7 @@ Power BI dashboards to visualize trader performance, strategies, and anomalies.
 
 Batch automation for streamlined execution and reduced manual effort.
 
-Tech Stack & Skills Used
+# Tech Stack & Skills Used
 
 Languages & Libraries: Python (Pandas, NumPy, Matplotlib), SQL (SSMS)
 
@@ -21,7 +21,7 @@ Tools & Platforms: Power BI, Excel
 
 Concepts: Data Cleaning, ETL, Data Visualization, Database Optimization
 
-Project Workflow
+# Project Workflow
 
 Data Extraction – Tradebook files gathered from multiple sources.
 
