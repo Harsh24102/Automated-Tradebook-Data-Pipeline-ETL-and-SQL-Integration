@@ -1,0 +1,21 @@
+# Automated Tradebook Data Pipeline – Python Scripts
+
+This folder contains Python scripts designed to **fetch, clean, merge, and process live trade data** from servers and integrate with SQL databases. The scripts automate daily data workflows for NSE, BSE, and MCX segments.
+
+## Scripts Overview
+
+- **Bhavcopy Fetch.py** – Fetches bhavcopy files automatically for NSE/BSE/MCX.  
+- **Data Cross Check.py** – Validates and cross-checks trade data accuracy.  
+- **Greek_Daily_Cleaning.py** – Cleans daily Greek option data for integration.  
+- **Greek_Daily_Load_SQL.py** – Loads cleaned Greek data into SQL database.  
+- **Greek_Daily_Merge.py** – Merges multiple daily Greek files into one dataset.  
+- **Greek_Data_BSE_Daily.py** – Processes daily BSE Greek option data.  
+- **Greek_Data_NSE_Daily.py** – Processes daily NSE Greek option data.  
+- **Live MCX.py** – Fetches live MCX market data from server.  
+- **Live Spread ALL.py** – Collects live spread data for all instruments.  
+- **Live Spread EXP.py** – Fetches expiry-specific spread data.  
+- **Live Spread MCX.py** – Monitors MCX spreads live.  
+- **Live Spread NFT.py** – Collects NFT-related spread data.  
+- **Live Test Server.py** – Tests live server connectivity and pipelines.  
+- **TEST_SERVER.py** – Script version of test server code for validation.  
+- **Trade_MCX.py** – Processes MCX trade data and prepares reports.  
