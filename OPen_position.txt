@@ -1,0 +1,38 @@
+SELECT 
+    rt.Token,
+    rt.BuyQuantity,
+    rt.SellQuantity,
+	rt.TradeDate,
+    SUM(rt.BuyQuantity) OVER (
+        PARTITION BY rt.Token ORDER BY rt.TradeDate ROWS UNBOUNDED PRECEDING
+    ) - SUM(rt.SellQuantity) OVER (
+        PARTITION BY rt.Token ORDER BY rt.TradeDate ROWS UNBOUNDED PRECEDING
+    ) AS Open_Position_
+FROM OP_Table rt
+ORDER BY rt.Token, rt.TradeDate;  -- Sorting by Token and TradeDate for consistency
+
+###2nd update code
+
+
+UPDATE OPEN_01_04_ALL
+SET OPEN_POSITION_ = (
+    SELECT SUM(rt2.BuyQuantity) - SUM(rt2.SellQuantity)
+    FROM OP_Table rt2
+    WHERE rt2.ManagerID = OPEN_01_04_ALL.ManagerID
+    AND rt2.symbol = OPEN_01_04_ALL.symbol
+    AND rt2.strikePrice = OPEN_01_04_ALL.strikePrice
+    AND rt2.OptionType = OPEN_01_04_ALL.OptionType
+    AND rt2.ExpiryDate = OPEN_01_04_ALL.ExpiryDate
+    AND rt2.TradeDate <= OPEN_01_04_ALL.TradeDate
+)
+FROM OPEN_01_04_ALL
+WHERE EXISTS (
+    SELECT 1
+    FROM OP_Table rt2
+    WHERE rt2.ManagerID = OPEN_01_04_ALL.ManagerID
+    AND rt2.symbol = OPEN_01_04_ALL.symbol
+    AND rt2.strikePrice = OPEN_01_04_ALL.strikePrice
+    AND rt2.OptionType = OPEN_01_04_ALL.OptionType
+    AND rt2.ExpiryDate = OPEN_01_04_ALL.ExpiryDate
+    AND rt2.TradeDate = OPEN_01_04_ALL.TradeDate
+);
