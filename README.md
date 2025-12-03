@@ -3,7 +3,7 @@
 ![Status: Complete](https://img.shields.io/badge/Status-Complete-green.svg)
 [![Tech Stack](https://img.shields.io/badge/Database-SQL%20Server-red.svg)](https://www.microsoft.com/en-us/sql-server/)
 [![Tech Stack](https://img.shields.io/badge/ETL-Python%20%7C%20Pandas-blue.svg)](https://www.python.org/)
-[![Tech Stack](https://imgl.shields.io/badge/Visualization-Power%20BI-yellow.svg)](https://powerbi.microsoft.com/en-us/)
+[![Tech Stack](https://imgl.shields.io/badge/Visualization-Power%20BI-yellow.svg)]([https://powerbi.microsoft.com/en-us/](https://www.microsoft.com/en-us/power-platform/products/power-bi/))
 
 ## 1. Project Goal & Business Impact
 
